@@ -21,12 +21,13 @@ The certificate develops the skills needed to design sophisticated, context-awar
 
 ### Module 1 — Generative AI and Structured Extraction
 
-#### M1L1 · Extract Structured JSON from Unstructured Text
+#### M1L1 · Extract Structured JSON from Unstructured Text — Completed
 
 Uses a large language model (LLM) to parse raw restaurant descriptions from a California culinary map into structured JSON. The lab demonstrates prompt engineering for reliable, schema-constrained output and includes:
 
 - A Jupyter notebook containing the lab implementation
-- Structured restaurant data generated from unstructured descriptions
+- Structured data for 210 restaurant descriptions generated from unstructured text
+- Pydantic-based validation and automatic JSON repair for malformed model responses
 - A supporting image illustrating the processing flow
 
 **Lab files**
@@ -34,6 +35,48 @@ Uses a large language model (LLM) to parse raw restaurant descriptions from a Ca
 - [Structure Text and Multimodal Data with LLMs.ipynb](./M1L1/Structure%20Text%20and%20Multimodal%20Data%20with%20LLMs.ipynb)
 - [structured_restaurant_data.json](./M1L1/structured_restaurant_data.json)
 - [M1L1_structure_for_loop.png](./M1L1/M1L1_structure_for_loop.png)
+
+**Concepts demonstrated**
+
+- Loading and splitting unstructured restaurant descriptions
+- Calling the IBM Granite 4H Small model through the IBM watsonx.ai SDK
+- One-shot prompt engineering for structured extraction
+- Validating model responses against a defined schema
+- Repairing invalid JSON responses before saving the final dataset
+- Assigning stable `itemId` values to the structured records
+
+**Dependencies**
+
+```text
+numpy==2.3.4
+matplotlib==3.10.7
+ibm-watsonx-ai==1.4.7
+```
+
+#### M1L2 · Process Multimodal Data with LLMs — Completed
+
+Uses multimodal foundation models to generate descriptive captions for food images and enrich existing recipe and user-review datasets. This lab connects visual information with structured text so it can be used in a unified, machine-readable knowledge base.
+
+- Generated image descriptions for 109 food recipe records
+- Added image captions to 10 user review records
+- Used recipe names and review text as context for more relevant captions
+- Preserved the original structured data while adding multimodal fields
+
+**Lab files**
+
+- [M1L2_Process_Multimodal_Data_with_LLMs.ipynb](./M1L2/M1L2_Process_Multimodal_Data_with_LLMs.ipynb)
+- [augmented_food_recipe.json](./M1L2/augmented_food_recipe.json)
+- [augmented_user_review.json](./M1L2/augmented_user_review.json)
+- [M1L2_caption_all_recipes.jpg.png](./M1L2/M1L2_caption_all_recipes.jpg.png)
+
+**Concepts demonstrated**
+
+- Loading recipe and user-visit JSON data containing image references
+- Calling a vision-capable LLM through the IBM watsonx.ai SDK
+- Designing image-caption prompts with recipe and review context
+- Downloading and processing images referenced by URLs
+- Adding `image_description` and `image_captions` fields to structured records
+- Using retry handling for image requests before saving enriched JSON datasets
 
 ### Module 2 — Retrieval-Augmented Generation
 
@@ -55,6 +98,12 @@ This module focuses on MCP-based tool and context orchestration, enabling agents
 │   ├── Structure Text and Multimodal Data with LLMs.ipynb
 │   ├── structured_restaurant_data.json
 │   └── M1L1_structure_for_loop.png
+├── M1L2/
+│   ├── M1L2_Process_Multimodal_Data_with_LLMs.ipynb
+│   ├── augmented_food_recipe.json
+│   ├── augmented_user_review.json
+│   └── M1L2_caption_all_recipes.jpg.png
+├── .gitignore
 └── README.md
 ```
 
