@@ -67,7 +67,7 @@ Uses multimodal foundation models to generate descriptive captions for food imag
 - [M1L2_Process_Multimodal_Data_with_LLMs.ipynb](./M1L2/M1L2_Process_Multimodal_Data_with_LLMs.ipynb)
 - [augmented_food_recipe.json](./M1L2/augmented_food_recipe.json)
 - [augmented_user_review.json](./M1L2/augmented_user_review.json)
-- [M1L2_caption_all_recipes.jpg.png](./M1L2/M1L2_caption_all_recipes.jpg.png)
+- [M1L2_caption_all_recipes.png](./M1L2/M1L2_caption_all_recipes.png)
 
 **Concepts demonstrated**
 
@@ -78,18 +78,79 @@ Uses multimodal foundation models to generate descriptive captions for food imag
 - Adding `image_description` and `image_captions` fields to structured records
 - Using retry handling for image requests before saving enriched JSON datasets
 
+#### M1L3 · Manage Structured Restaurant Data — Completed
+
+Builds a Python-based restaurant data management workflow for adding, updating, and processing structured restaurant records.
+
+**Lab files**
+
+- [restaurant_data_management.py](./M1L3/restaurant_data_management.py)
+- [structured_restaurant_data.json](./M1L3/structured_restaurant_data.json)
+- [M1L3_new_data_entry_process.png](./M1L3/M1L3_new_data_entry_process.png)
+
 ### Module 2 — Retrieval-Augmented Generation
 
 This module covers the foundations and implementation of RAG systems, including document ingestion, chunking, embeddings, vector search, retrieval, and grounded generation.
+
+#### M2L1 · Build a Multimodal Vector Index — Completed
+
+- [M2L1_Lab.ipynb](./M2L1/M2L1_Lab.ipynb)
+- [M2L1_multimodal_vector_index.png](./M2L1/M2L1_multimodal_vector_index.png)
+
+#### M2L2 · Perform Similarity-Based Retrieval — Completed
+
+- [M2L2_Lab.ipynb](./M2L2/M2L2_Lab.ipynb)
+- [M2L2_similarity_retrieval.png](./M2L2/M2L2_similarity_retrieval.png)
+
+#### M2L3 · Apply Multimodal Fusion — Completed
+
+- [M2L3_Lab.ipynb](./M2L3/M2L3_Lab.ipynb)
+- [M2L3_multimodal_fusion_results.png](./M2L3/M2L3_multimodal_fusion_results.png)
 
 ### Module 3 — Autonomous and Multi-Agent AI
 
 This module explores agentic workflows, tool calling, planning, memory, and collaboration between specialized AI agents.
 
+#### M3L1 · Design Specialized Agents — Completed
+
+- [M3L1_Design_Specialized_Agents.ipynb](./M3L1/M3L1_Design_Specialized_Agents.ipynb)
+- [M3L1_food_style_expert_goal.png](./M3L1/M3L1_food_style_expert_goal.png)
+
+#### M3L2 · Implement Multi-Agent Systems — Completed
+
+- [M3L2_Implement_Multi_Agent_Systems.ipynb](./M3L2/M3L2_Implement_Multi_Agent_Systems.ipynb)
+- [M3L2_node_analyze_styles.png](./M3L2/M3L2_node_analyze_styles.png)
+
+#### M3L3 · Build a Chatbot Interface — Completed
+
+- [M3L3_Build_Chatbot_Interface.ipynb](./M3L3/M3L3_Build_Chatbot_Interface.ipynb)
+- [M3L3_preference_extraction_test.png](./M3L3/M3L3_preference_extraction_test.png)
+
 ### Module 4 — Model Context Protocol and Agent Orchestration
 
 This module focuses on MCP-based tool and context orchestration, enabling agents to interact with external data sources and services through standardized interfaces.
 
+#### M4L1 · Configure Tools with a Data MCP Server — Completed
+
+- [server.py](./M4L1/server.py)
+- [test.py](./M4L1/test.py)
+- [California-Culinary-Map.txt](./M4L1/California-Culinary-Map.txt)
+- [M4L1_Configure_Tools_Data_MCP_Server.png](./M4L1/M4L1_Configure_Tools_Data_MCP_Server.png)
+
+#### M4L2 · Build and Test an MCP Client — Completed
+
+- [client.py](./M4L2/client.py)
+- [server.py](./M4L2/server.py)
+- [test.py](./M4L2/test.py)
+- [M4L2_Build_Test_MCP_Client.png](./M4L2/M4L2_Build_Test_MCP_Client.png)
+
+#### M4L3 · Design an LLM MCP Host — Completed
+
+- [app.py](./M4L3/app.py)
+- [client.py](./M4L3/client.py)
+- [server.py](./M4L3/server.py)
+- [test.py](./M4L3/test.py)
+- [M4L3_Design_LLM_MCP_Host.png](./M4L3/M4L3_Design_LLM_MCP_Host.png)
 ## Repository Structure
 
 ```text
@@ -102,7 +163,44 @@ This module focuses on MCP-based tool and context orchestration, enabling agents
 │   ├── M1L2_Process_Multimodal_Data_with_LLMs.ipynb
 │   ├── augmented_food_recipe.json
 │   ├── augmented_user_review.json
-│   └── M1L2_caption_all_recipes.jpg.png
+│   └── M1L2_caption_all_recipes.png
+├── M1L3/
+│   ├── restaurant_data_management.py
+│   ├── structured_restaurant_data.json
+│   └── M1L3_new_data_entry_process.png
+├── M2L1/
+│   ├── M2L1_Lab.ipynb
+│   └── M2L1_multimodal_vector_index.png
+├── M2L2/
+│   ├── M2L2_Lab.ipynb
+│   └── M2L2_similarity_retrieval.png
+├── M2L3/
+│   ├── M2L3_Lab.ipynb
+│   └── M2L3_multimodal_fusion_results.png
+├── M3L1/
+│   ├── M3L1_Design_Specialized_Agents.ipynb
+│   └── M3L1_food_style_expert_goal.png
+├── M3L2/
+│   ├── M3L2_Implement_Multi_Agent_Systems.ipynb
+│   └── M3L2_node_analyze_styles.png
+├── M3L3/
+│   ├── M3L3_Build_Chatbot_Interface.ipynb
+│   └── M3L3_preference_extraction_test.png
+├── M4L1/
+│   ├── server.py
+│   ├── test.py
+│   └── M4L1_Configure_Tools_Data_MCP_Server.png
+├── M4L2/
+│   ├── client.py
+│   ├── server.py
+│   ├── test.py
+│   └── M4L2_Build_Test_MCP_Client.png
+├── M4L3/
+│   ├── app.py
+│   ├── client.py
+│   ├── server.py
+│   ├── test.py
+│   └── M4L3_Design_LLM_MCP_Host.png
 ├── .gitignore
 └── README.md
 ```
